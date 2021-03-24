@@ -1,5 +1,3 @@
---Made by Drzx#0013 on discord--
-
 local main = Instance.new("Frame")
 local label = Instance.new("TextLabel")
 local BiggerGui = Instance.new("TextButton")
@@ -10,11 +8,13 @@ local Admin = Instance.new("TextButton")
 --Properties:
 
 main.Name = "main"
-main.Parent = game.Workspace
+main.Parent = game.CoreGui
 main.BackgroundColor3 = Color3.fromRGB(0, 168, 38)
 main.BorderColor3 = Color3.fromRGB(33, 255, 6)
 main.Position = UDim2.new(0.0136698484, 0, 0.208928525, 0)
 main.Size = UDim2.new(0, 149, 0, 111)
+main.Active = true
+main.Draggable = true
 
 label.Name = "label"
 label.Parent = main
