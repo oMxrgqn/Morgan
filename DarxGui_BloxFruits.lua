@@ -1,14 +1,19 @@
+--Made by Drzx#0013 on discord--
+
+local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local label = Instance.new("TextLabel")
-local BiggerGui = Instance.new("TextButton")
 local MheeHub = Instance.new("TextButton")
 local SkyHub = Instance.new("TextButton")
 local Admin = Instance.new("TextButton")
+local BiggerGui = Instance.new("TextButton")
 
 --Properties:
 
+ScreenGui.Parent = game.CoreGui
+
 main.Name = "main"
-main.Parent = game.CoreGui
+main.Parent = ScreenGui
 main.BackgroundColor3 = Color3.fromRGB(0, 168, 38)
 main.BorderColor3 = Color3.fromRGB(33, 255, 6)
 main.Position = UDim2.new(0.0136698484, 0, 0.208928525, 0)
@@ -26,19 +31,6 @@ label.Font = Enum.Font.SciFi
 label.Text = "Darx Hub"
 label.TextColor3 = Color3.fromRGB(0, 0, 0)
 label.TextSize = 20.000
-
-BiggerGui.Name = "BiggerGui"
-BiggerGui.Parent = main
-BiggerGui.BackgroundColor3 = Color3.fromRGB(33, 255, 6)
-BiggerGui.Position = UDim2.new(0.0671140924, 0, 0.77477479, 0)
-BiggerGui.Size = UDim2.new(0, 58, 0, 19)
-BiggerGui.Font = Enum.Font.SourceSans
-BiggerGui.Text = "Bigger Gui"
-BiggerGui.TextColor3 = Color3.fromRGB(0, 0, 0)
-BiggerGui.TextSize = 14.000
-BiggerGui.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/oMxrgqn/Morgan/main/BiggerGui.lua'))()
-end)
 
 MheeHub.Name = "MheeHub"
 MheeHub.Parent = main
@@ -66,6 +58,7 @@ SkyHub.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/oMxrgqn/Morgan/main/SkyHub.lua'))()
 end)
 
+
 Admin.Name = "Admin"
 Admin.Parent = main
 Admin.BackgroundColor3 = Color3.fromRGB(33, 255, 6)
@@ -78,4 +71,17 @@ Admin.TextColor3 = Color3.fromRGB(0, 0, 0)
 Admin.TextSize = 14.000
 Admin.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+BiggerGui.Name = "BiggerGui"
+BiggerGui.Parent = main
+BiggerGui.BackgroundColor3 = Color3.fromRGB(33, 255, 6)
+BiggerGui.Position = UDim2.new(0.0671140924, 0, 0.77477479, 0)
+BiggerGui.Size = UDim2.new(0, 58, 0, 19)
+BiggerGui.Font = Enum.Font.SourceSans
+BiggerGui.Text = "Bigger Gui"
+BiggerGui.TextColor3 = Color3.fromRGB(0, 0, 0)
+BiggerGui.TextSize = 14.000
+BiggerGui.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/oMxrgqn/Morgan/main/BiggerGui.lua'))()
 end)
