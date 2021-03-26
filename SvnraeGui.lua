@@ -10,7 +10,7 @@ local RagdollEngine = Instance.new("TextButton")
 ScreenGui.Parent = game.CoreGui
 
 main.Name = "main"
-main.Parent = game.Workspace
+main.Parent = ScreenGui
 main.BackgroundColor3 = Color3.fromRGB(252, 1, 7)
 main.Position = UDim2.new(0.861358762, 0, 0.358035803, 0)
 main.Size = UDim2.new(0, 117, 0, 135)
