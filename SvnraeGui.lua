@@ -1,3 +1,4 @@
+local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local label = Instance.new("TextLabel")
 local BloxFruits = Instance.new("TextButton")
@@ -38,6 +39,7 @@ BloxFruits.TextSize = 14.000
 BloxFruits.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/oMxrgqn/Morgan/main/BiggerGui.lua'))()
 end)
+
 
 KingPiece.Name = "KingPiece"
 KingPiece.Parent = main
