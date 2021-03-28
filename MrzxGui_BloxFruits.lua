@@ -28,7 +28,7 @@ label.BorderColor3 = Color3.fromRGB(33, 255, 6)
 label.Position = UDim2.new(0, 0, -0.0180180185, 0)
 label.Size = UDim2.new(0, 149, 0, 50)
 label.Font = Enum.Font.SciFi
-label.Text = "Darx Hub"
+label.Text = "Mrzx Hub"
 label.TextColor3 = Color3.fromRGB(0, 0, 0)
 label.TextSize = 20.000
 
