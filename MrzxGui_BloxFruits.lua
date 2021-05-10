@@ -1,4 +1,4 @@
---Made by Drzx#0013 on discord--
+--Made by Mrqvvi#0013 on discord--
 
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
