@@ -364,7 +364,7 @@ local function getObjGen()
             Gui.Selection.Name = "Selection"
             Gui.Selection.Parent = Gui.Checkbox
             Gui.Selection.AnchorPoint = Vector2.new(0.5, 0.5)
-            Gui.Selection.BackgroundColor3 = Color3.fromRGB(255, 5, 15)
+            Gui.Selection.BackgroundColor3 = Color3.fromRGB(83, 87, 158)
             Gui.Selection.BackgroundTransparency = 1.000
             Gui.Selection.BorderSizePixel = 0
             Gui.Selection.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -4565,7 +4565,7 @@ function UILibrary.Section:Keybind(sett, callback)
 end
 
 function toInteger(color)
-    return math.floor(color.r * 255) * 256 ^ 2 + math.floor(color.g * 255) * 256 + math.floor(color.b * 255)
+    return math.floor(color.r * 0) * 256 ^ 2 + math.floor(color.g * 103) * 256 + math.floor(color.b * 106)
 end
 
 function toHex(color)
@@ -4609,7 +4609,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
     local element = cheatBase.Content.ElementContent.ColorPicker
 
     local menuIsOpen = false
-    local currentclr = Color3.fromRGB(255, 255, 255)
+    local currentclr = Color3.fromRGB(0,103,106)
 
     functions.setValue = function(clr)
         TweenService:Create(
@@ -4624,7 +4624,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
 
         callback(clr)
         element.Text.Label.Text =
-            math.floor(clr.R * 255) .. ", " .. math.floor(clr.G * 255) .. ", " .. math.floor(clr.B * 255)
+            math.floor(clr.R * 0) .. ", " .. math.floor(clr.G * 103) .. ", " .. math.floor(clr.B * 106)
     end
 
     functions.getValue = function()
@@ -4860,7 +4860,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
                             Content.Buttons.Cancel.OtherFill,
                             TI,
                             {
-                                ImageColor3 = Color3.fromRGB(150, 69, 71)
+                                ImageColor3 = Color3.fromRGB(0,103,106)
                             }
                         ):Play()
                     end
@@ -4881,7 +4881,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
                             Content.Buttons.Cancel.OtherFill,
                             TI,
                             {
-                                ImageColor3 = Color3.fromRGB(170, 89, 91)
+                                ImageColor3 = Color3.fromRGB(0,103,106)
                             }
                         ):Play()
                     end
@@ -4908,7 +4908,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
                             Content.Buttons.Confirm.OtherFill,
                             TI,
                             {
-                                ImageColor3 = Color3.fromRGB(60, 150, 107)
+                                ImageColor3 = Color3.fromRGB(0,103,106)
                             }
                         ):Play()
                     end
@@ -4929,7 +4929,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
                             Content.Buttons.Confirm.OtherFill,
                             TI,
                             {
-                                ImageColor3 = Color3.fromRGB(85, 170, 127)
+                                ImageColor3 = Color3.fromRGB(0,103,106)
                             }
                         ):Play()
                     end
@@ -4944,7 +4944,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
                 element.Text,
                 TI,
                 {
-                    ImageColor3 = Color3.fromRGB(20, 20, 20)
+                    ImageColor3 = Color3.fromRGB(0,103,106)
                 }
             ):Play()
         end
@@ -4956,7 +4956,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
                 element.Text,
                 TI,
                 {
-                    ImageColor3 = Color3.fromRGB(25, 25, 25)
+                    ImageColor3 = Color3.fromRGB(0,103,106)
                 }
             ):Play()
 
@@ -5308,7 +5308,7 @@ function UILibrary.Section:Dropdown(sett, callback)
                                 Option,
                                 TI,
                                 {
-                                    ImageColor3 = Color3.fromRGB(20, 20, 20)
+                                    ImageColor3 = Color3.fromRGB(0,103,106)
                                 }
                             ):Play()
                         end
@@ -5325,7 +5325,7 @@ function UILibrary.Section:Dropdown(sett, callback)
                                 Option,
                                 TI,
                                 {
-                                    ImageColor3 = Color3.fromRGB(25, 25, 25)
+                                    ImageColor3 = Color3.fromRGB(0,103,106)
                                 }
                             ):Play()
                         end
@@ -5466,7 +5466,7 @@ function UILibrary.Section:Dropdown(sett, callback)
                         TI,
                         {
                             Position = UDim2.fromScale(0, .2),
-                            ImageColor3 = Color3.fromRGB(50, 50, 50)
+                            ImageColor3 = Color3.fromRGB(0,103,106)
                         }
                     ):Play()
                 elseif input.UserInputType == Enum.UserInputType.MouseButton1 then
@@ -5490,7 +5490,7 @@ function UILibrary.Section:Dropdown(sett, callback)
                         TI,
                         {
                             Position = UDim2.fromScale(0, 0),
-                            ImageColor3 = Color3.fromRGB(100, 100, 100)
+                            ImageColor3 = Color3.fromRGB(0,103,106)
                         }
                     ):Play()
                 end
