@@ -125,7 +125,6 @@ local function getObjGen()
                 UIListLayout_9 = Instance.new("UIListLayout"),
                 UIPadding_5 = Instance.new("UIPadding"),
                 Window = Instance.new("Frame"),
-                Watermark = Instance.new("TextLabel"),
                 UIPadding_6 = Instance.new("UIPadding"),
                 MainUI = Instance.new("Frame"),
                 DropShadowHolder_9 = Instance.new("Frame"),
@@ -1203,19 +1202,6 @@ local function getObjGen()
             Gui.Window.BackgroundTransparency = 1.000
             Gui.Window.Size = UDim2.new(1, 0, 1, 0)
 
-            Gui.Watermark.Name = "Watermark"
-            Gui.Watermark.Parent = Gui.Window
-            Gui.Watermark.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            Gui.Watermark.BackgroundTransparency = 1.000
-            Gui.Watermark.Size = UDim2.new(0.5, 0, 0.0199999996, 0)
-            Gui.Watermark.Font = Enum.Font.Gotham
-            Gui.Watermark.Text = "hydra v2 | nil | nil"
-            Gui.Watermark.TextColor3 = Color3.fromRGB(255, 255, 255)
-            Gui.Watermark.TextSize = 14.000
-            Gui.Watermark.TextStrokeTransparency = 0.800
-            Gui.Watermark.TextXAlignment = Enum.TextXAlignment.Left
-            Gui.Watermark.Position = UDim2.new(0, 0, 0, 0)
-            
             Gui.UIPadding_6.Parent = Gui.Window
             Gui.UIPadding_6.PaddingBottom = UDim.new(0, 8)
             Gui.UIPadding_6.PaddingLeft = UDim.new(0, 8)
@@ -3265,7 +3251,6 @@ function UILibrary.new(gameName, userId, rank)
     local Drag = Draggable.Drag(window.MainUI, Frame)
 
     --// Customize the GUI
-    window.Watermark.Text = ("hydrahub v2 | %s | %s"):format(userId, gameName)
     local userinfo = window.MainUI.Sidebar.ContentHolder.UserInfo.Content
     userinfo.Rank.Text = rank
     userinfo.Title.Text = userId
@@ -4565,7 +4550,7 @@ function UILibrary.Section:Keybind(sett, callback)
 end
 
 function toInteger(color)
-    return math.floor(color.r * 0) * 256 ^ 2 + math.floor(color.g * 103) * 256 + math.floor(color.b * 106)
+    return math.floor(color.r * 255) * 256 ^ 2 + math.floor(color.g * 255) * 256 + math.floor(color.b * 255)
 end
 
 function toHex(color)
@@ -4609,7 +4594,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
     local element = cheatBase.Content.ElementContent.ColorPicker
 
     local menuIsOpen = false
-    local currentclr = Color3.fromRGB(0,103,106)
+    local currentclr = Color3.fromRGB(255, 255, 255)
 
     functions.setValue = function(clr)
         TweenService:Create(
@@ -4624,7 +4609,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
 
         callback(clr)
         element.Text.Label.Text =
-            math.floor(clr.R * 0) .. ", " .. math.floor(clr.G * 103) .. ", " .. math.floor(clr.B * 106)
+            math.floor(clr.R * 255) .. ", " .. math.floor(clr.G * 255) .. ", " .. math.floor(clr.B * 255)
     end
 
     functions.getValue = function()
@@ -4860,7 +4845,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
                             Content.Buttons.Cancel.OtherFill,
                             TI,
                             {
-                                ImageColor3 = Color3.fromRGB(0,103,106)
+                                ImageColor3 = Color3.fromRGB(150, 69, 71)
                             }
                         ):Play()
                     end
@@ -4881,7 +4866,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
                             Content.Buttons.Cancel.OtherFill,
                             TI,
                             {
-                                ImageColor3 = Color3.fromRGB(0,103,106)
+                                ImageColor3 = Color3.fromRGB(170, 89, 91)
                             }
                         ):Play()
                     end
@@ -4908,7 +4893,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
                             Content.Buttons.Confirm.OtherFill,
                             TI,
                             {
-                                ImageColor3 = Color3.fromRGB(0,103,106)
+                                ImageColor3 = Color3.fromRGB(60, 150, 107)
                             }
                         ):Play()
                     end
@@ -4929,7 +4914,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
                             Content.Buttons.Confirm.OtherFill,
                             TI,
                             {
-                                ImageColor3 = Color3.fromRGB(0,103,106)
+                                ImageColor3 = Color3.fromRGB(85, 170, 127)
                             }
                         ):Play()
                     end
@@ -4944,7 +4929,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
                 element.Text,
                 TI,
                 {
-                    ImageColor3 = Color3.fromRGB(0,103,106)
+                    ImageColor3 = Color3.fromRGB(20, 20, 20)
                 }
             ):Play()
         end
@@ -4956,7 +4941,7 @@ function UILibrary.Section:ColorPicker(sett, callback)
                 element.Text,
                 TI,
                 {
-                    ImageColor3 = Color3.fromRGB(0,103,106)
+                    ImageColor3 = Color3.fromRGB(25, 25, 25)
                 }
             ):Play()
 
@@ -5308,7 +5293,7 @@ function UILibrary.Section:Dropdown(sett, callback)
                                 Option,
                                 TI,
                                 {
-                                    ImageColor3 = Color3.fromRGB(0,103,106)
+                                    ImageColor3 = Color3.fromRGB(20, 20, 20)
                                 }
                             ):Play()
                         end
@@ -5325,7 +5310,7 @@ function UILibrary.Section:Dropdown(sett, callback)
                                 Option,
                                 TI,
                                 {
-                                    ImageColor3 = Color3.fromRGB(0,103,106)
+                                    ImageColor3 = Color3.fromRGB(25, 25, 25)
                                 }
                             ):Play()
                         end
@@ -5466,7 +5451,7 @@ function UILibrary.Section:Dropdown(sett, callback)
                         TI,
                         {
                             Position = UDim2.fromScale(0, .2),
-                            ImageColor3 = Color3.fromRGB(0,103,106)
+                            ImageColor3 = Color3.fromRGB(50, 50, 50)
                         }
                     ):Play()
                 elseif input.UserInputType == Enum.UserInputType.MouseButton1 then
@@ -5490,7 +5475,7 @@ function UILibrary.Section:Dropdown(sett, callback)
                         TI,
                         {
                             Position = UDim2.fromScale(0, 0),
-                            ImageColor3 = Color3.fromRGB(0,103,106)
+                            ImageColor3 = Color3.fromRGB(100, 100, 100)
                         }
                     ):Play()
                 end
